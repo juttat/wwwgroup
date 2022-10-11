@@ -6,10 +6,17 @@
     <title>Welcome to ESC rating!</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <script type="module" src="index.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
 
   </head>
   <body>
     <body>
-      <button onclick="myFunction()">Log in</button>
+      <button onclick="setCookie()">Get started</button>
+      <form>
+        Show: <input type="number" id="show"><br>
+        Singing: <input type="number" id="sing"><br>
+        Song: <input type="number" id="song"><br>
+        <button onclick="rate()"></button>
+      </form>
   </body>
 </html>

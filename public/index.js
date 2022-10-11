@@ -10,10 +10,10 @@ import {
     btnLogout
   } from './ui' */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import {
+/*import {
     getAuth,
     createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";*/
 import {
     getFirestore,
     collection,
@@ -36,13 +36,13 @@ const firebaseApp = initializeApp({
 });
 
 // Setting up the auth and firestore services
-const auth = getAuth(firebaseApp);
+//const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 //console.log(db)
 
 // Setting up references to the "Countries" and "Users" collections
 const countries = collection(db, "countries");
-const users = collection(db, "users");
+//const users = collection(db, "users");
 //console.log(countries)
 
 // An example reference to a country in the "Countries collection", in this case Finland
@@ -57,30 +57,20 @@ const countryData = {
 Adding the country to the "Countries" collection
 await setDoc(doc(db, "countries", "ukr"), countryData);*/
 
-const querySnapshot = await getDocs(collection(db, "countries"));
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-});
+window.querySnapshot = await getDocs(collection(db, "countries"));
 
-// Creating a user account
-const createAccount = async () => {
-    const loginEmail = "user3@test.org";
-    const loginPassword = "1234";
-    console.log(loginEmail + loginPassword)
 
-    try {
-        const userCredential = await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
-        console.log(userCredential.user);
-    }
-    catch (error) {
-        console.log(error);
-        showLoginError(error);
-    }
-}
+/*function setCookie() {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        //document.cookie = doc.id + "=0,0,0"
+        let date = new Date();
+        date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = doc.id + "=0,0,0; " + expires + "; path=/";
+    })
+}*/
 
-function myFunction() = {
-    createAccount;
-    return;
-}
+//export { querySnapshot };
 
 console.log("Hello!")
