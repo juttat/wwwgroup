@@ -24,7 +24,8 @@ function initCookie() {
     console.log(countryArr)
 }
 
-function rate() {
+function rate(valtio) {
+    //var maa = valtio.toString();
     var total = Number(0);
     var show = document.getElementById("show").value.toString();
     if (show.length === 0) {
@@ -45,7 +46,7 @@ function rate() {
     }
     var points = show + "," + sing + "," + song + "," + total;
     var toCook = "=" + points
-    setCookie("den", toCook)
+    setCookie(valtio, toCook)
 }
 
 function rank() {
