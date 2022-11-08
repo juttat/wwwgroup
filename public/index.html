@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to ESC rating!</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script type="module" src="index.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+
+  </head>
+  <body>
+    <body>
+      <button onclick="initCookie()">Get started</button>
+      <form>
+        Show: <input type="number" id="show"><br>
+        Singing: <input type="number" id="sing"><br>
+        Song: <input type="number" id="song"><br>
+        <button onclick="rate('den')">Rate Denmark!</button>
+        <button onclick="rate('fin')">Rate Finland!</button>
+        <button onclick="rate('swe')">Rate Sweden!</button>
+        <button onclick="rate('ukr')">Rate Ukraine!</button>
+      </form>
+      <button onclick="rank()">Rank by total points</button>
+  </body>
+</html>
