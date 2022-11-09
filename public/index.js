@@ -74,3 +74,10 @@ window.querySnapshot = await getDocs(collection(db, "countries"));
 //export { querySnapshot };
 
 console.log("Hello!")
+
+console.log("Hello!")
+
+console.log("Hello!")
+
+console.log("Hello!")
+console.log("Hello!")
